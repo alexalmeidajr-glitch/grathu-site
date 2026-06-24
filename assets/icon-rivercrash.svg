@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad-rc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#00bcd4" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <rect x="5" y="5" width="90" height="90" rx="22" fill="#0b0c10" stroke="#1f2937" stroke-width="2" />
+  
+  <g transform="translate(15, 15) scale(0.7)" filter="url(#shadow)">
+    <!-- Retro River Waves -->
+    <path d="M 10,75 C 30,75 30,65 50,65 C 70,65 70,75 90,75 M 10,50 C 30,50 30,40 50,40 C 70,40 70,50 90,50" 
+          fill="none" stroke="url(#grad-rc)" stroke-width="8" stroke-linecap="round" />
+          
+    <!-- 1944 Plane/Star Silhouette -->
+    <polygon points="50,5 62,38 95,38 68,58 78,92 50,72 22,92 32,58 5,38 38,38" fill="#ffffff" />
+    <polygon points="50,15 58,40 85,40 63,55 71,80 50,65 29,80 37,55 15,40 42,40" fill="#0b0c10" />
+    
+    <!-- Plane Center red/yellow indicator -->
+    <circle cx="50" cy="48" r="6" fill="#f44336" />
+  </g>
+</svg>

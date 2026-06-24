@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad-ff" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="100%" stop-color="#0086ff" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <rect x="5" y="5" width="90" height="90" rx="22" fill="#0b0c10" stroke="#1f2937" stroke-width="2" />
+  
+  <g transform="translate(15, 15) scale(0.7)" filter="url(#shadow)">
+    <!-- Book silhouette representing study -->
+    <path d="M 15,65 C 15,55 35,50 50,55 C 65,50 85,55 85,65 L 85,15 C 85,10 65,5 50,10 C 35,5 15,10 15,15 Z" fill="url(#grad-ff)" />
+    <!-- Book spine / page separator -->
+    <path d="M 50,10 L 50,58" stroke="#000000" stroke-width="4" stroke-linecap="round" opacity="0.3" />
+    <!-- Clock ring representing screen time limits -->
+    <circle cx="50" cy="55" r="22" fill="#0b0c10" stroke="#ffffff" stroke-width="6" />
+    <!-- Clock hands -->
+    <path d="M 50,38 L 50,55 L 62,55" fill="none" stroke="#00d2ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

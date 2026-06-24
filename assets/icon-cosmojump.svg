@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad-cj" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f857a6" />
+      <stop offset="50%" stop-color="#ff5858" />
+      <stop offset="100%" stop-color="#ffb199" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <!-- Rounded App Icon Background -->
+  <rect x="5" y="5" width="90" height="90" rx="22" fill="#111827" stroke="#1f2937" stroke-width="2" />
+  
+  <!-- Icon Design (Stylized Rocket blasting upwards) -->
+  <g transform="translate(10, 10) scale(0.8)">
+    <!-- Space star dust dots -->
+    <circle cx="20" cy="20" r="2" fill="#ffffff" opacity="0.8" />
+    <circle cx="75" cy="30" r="1.5" fill="#ffffff" opacity="0.6" />
+    <circle cx="30" cy="70" r="2.5" fill="#ffffff" opacity="0.9" />
+    <circle cx="70" cy="75" r="1" fill="#ffffff" opacity="0.4" />
+    
+    <!-- Rocket flames -->
+    <path d="M 50,55 L 43,78 C 43,78 50,85 50,85 C 50,85 57,78 57,78 Z" fill="#ffb199" opacity="0.9" />
+    <path d="M 50,60 L 46,74 C 46,74 50,78 50,78 C 50,78 54,74 54,74 Z" fill="#ff5858" />
+    
+    <!-- Rocket body -->
+    <path d="M 50,15 C 50,15 37,40 37,60 C 37,65 43,65 50,65 C 57,65 63,65 63,60 C 63,40 50,15 50,15 Z" fill="url(#grad-cj)" filter="url(#shadow)" />
+    
+    <!-- Rocket window -->
+    <circle cx="50" cy="40" r="6" fill="#111827" />
+    <circle cx="48" cy="38" r="2" fill="#ffffff" opacity="0.7" />
+    
+    <!-- Fins -->
+    <path d="M 37,50 L 25,62 L 37,60 Z" fill="#f857a6" />
+    <path d="M 63,50 L 75,62 L 63,60 Z" fill="#f857a6" />
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad-vida" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#43e97b" />
+      <stop offset="100%" stop-color="#38f9d7" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <!-- Rounded App Icon Background -->
+  <rect x="5" y="5" width="90" height="90" rx="22" fill="#111827" stroke="#1f2937" stroke-width="2" />
+  
+  <!-- Icon Design (Stylized Lotus/Leaf shape) -->
+  <g transform="translate(10, 10) scale(0.8)">
+    <!-- Main leaf shape -->
+    <path d="M 50,15 C 65,35 75,55 50,85 C 25,55 35,35 50,15 Z" fill="url(#grad-vida)" filter="url(#shadow)" />
+    <!-- Inner design lines (zen balance) -->
+    <path d="M 50,15 L 50,85 M 50,45 C 50,45 62,40 65,30 M 50,60 C 50,60 68,55 70,42 M 50,45 C 50,45 38,40 35,30 M 50,60 C 50,60 32,55 30,42" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+  </g>
+</svg>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="grathu - Estúdio de desenvolvimento de aplicativos e jogos móveis focados em produtividade, bem-estar e entretenimento. Conecte-se conosco em grathu.com e grathu.com.br.">
+  <meta name="keywords" content="grathu, grathu apps, grathu jogos, aplicativos produtividade, bem-estar, jogos de celular, android apps, google play store">
+  <meta name="author" content="grathu">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://grathu.com/">
+  <meta property="og:title" content="grathu | Tecnologia para Viver Melhor, Produzir e Divertir">
+  <meta property="og:description" content="Desenvolvemos aplicativos para impulsionar seu dia a dia, cuidar da sua saúde mental e física, e trazer diversão com jogos envolventes.">
+  <meta property="og:image" content="assets/Grathu_logo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://grathu.com/">
+  <meta property="twitter:title" content="grathu | Tecnologia para Viver Melhor, Produzir e Divertir">
+  <meta property="twitter:description" content="Desenvolvemos aplicativos para impulsionar seu dia a dia, cuidar da sua saúde mental e física, e trazer diversão com jogos envolventes.">
+  <meta property="twitter:image" content="assets/Grathu_logo.png">
+
+  <title>grathu | Aplicativos e Jogos para uma Vida Melhor</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="#home" class="logo" id="headerLogo">
+        <img src="assets/Grathu_logo.png" alt="grathu Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Início</a></li>
+        <li><a href="#pillars">Pilares</a></li>
+        <li><a href="#apps">Nossos Apps</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary" id="headerCta">Fale Conosco</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="hero-tag">Estúdio de Desenvolvimento Mobile</div>
+      <h1>Tecnologia inteligente para você <span class="gradient-text-primary">produzir</span>, <span class="gradient-text-primary">viver melhor</span> e se <span class="gradient-text-primary">divertir</span></h1>
+      <p>Na <strong>grathu</strong>, transformamos ideias complexas em aplicativos nativos de alta segurança. Criamos soluções focadas em otimizar sua rotina, cuidar da sua saúde e entregar entretenimento de alto nível.</p>
+      <div class="hero-actions">
+        <a href="#apps" class="btn btn-primary" id="heroCtaPrimary">Conhecer Aplicativos</a>
+        <a href="#pillars" class="btn btn-secondary" id="heroCtaSecondary">Nossa Filosofia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars Section -->
+  <section class="pillars" id="pillars">
+    <div class="container">
+      <div class="section-header">
+        <h2>Como ajudamos você</h2>
+        <p>Acreditamos que os smartphones devem ser ferramentas ativas para o aprimoramento pessoal. Nosso portfólio divide-se em três pilares fundamentais:</p>
+      </div>
+      <div class="pillars-grid">
+        <!-- Pillar 1: Productivity -->
+        <div class="card-glass pillar-prod">
+          <div class="pillar-icon-wrapper">⚡</div>
+          <h3>Produtividade</h3>
+          <p>Utilitários corporativos e educacionais desenvolvidos para simplificar fluxos de monitoramento e incentivar o gerenciamento de tempo inteligente em família.</p>
+        </div>
+        <!-- Pillar 2: Well-being -->
+        <div class="card-glass pillar-well">
+          <div class="pillar-icon-wrapper">🌱</div>
+          <h3>Bem-estar & Estilo de Vida</h3>
+          <p>Aplicativos pensados para rotinas de saúde física, gerenciamento seguro de medicamentos, registros alimentares e catalogação dos seus momentos de degustação favoritos.</p>
+        </div>
+        <!-- Pillar 3: Entertainment -->
+        <div class="card-glass pillar-fun">
+          <div class="pillar-icon-wrapper">🎮</div>
+          <h3>Entretenimento</h3>
+          <p>Jogos vibrantes, casuais e arcade criados com física dedicada, trilha sonora imersiva e mecânicas divertidas para desafiar seus reflexos a qualquer hora.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apps Showcase Section -->
+  <section class="apps" id="apps">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nossas Criações</h2>
+        <p>Conheça os projetos oficiais da <strong>grathu</strong> desenvolvidos para dispositivos móveis com os mais altos padrões de segurança e privacidade.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <ul class="app-filters">
+        <li><button class="filter-btn active" data-filter="all" id="btnFilterAll">Todos</button></li>
+        <li><button class="filter-btn" data-filter="productivity" id="btnFilterProd">Produtividade</button></li>
+        <li><button class="filter-btn" data-filter="wellbeing" id="btnFilterWell">Bem-estar & Estilo de Vida</button></li>
+        <li><button class="filter-btn" data-filter="games" id="btnFilterGames">Jogos</button></li>
+      </ul>
+
+      <!-- Apps Grid -->
+      <div class="apps-grid">
+        <!-- App 1: Family Focus (Productivity) -->
+        <div class="app-card-wrapper" data-category="productivity">
+          <div class="card-glass app-card">
+            <span class="app-badge badge-prod">Produtividade</span>
+            <div class="app-header">
+              <img src="assets/icon-familyfocus.svg" alt="Family Focus Icon" class="app-icon">
+              <div class="app-meta">
+                <h3>Family Focus</h3>
+                <span class="app-tagline">Controle Parental & Educação</span>
+              </div>
+            </div>
+            <div class="app-body">
+              <p>Estimule o aprendizado dos seus filhos de maneira inovadora. O Family Focus é um aplicativo de controle parental que gerencia o tempo de tela do dispositivo móvel do seu filho, recompensando-o com minutos adicionais baseados no acerto de exercícios escolares de matemática, ciências e línguas.</p>
+              <ul class="app-features">
+                <li>Sincronização reativa via Supabase e banco local Room</li>
+                <li>Filtros avançados e whitelist de aplicativos permitidos</li>
+                <li>Monitoramento ativo contra burlas em background</li>
+                <li>Dashboard de acompanhamento de progresso dos pais</li>
+              </ul>
+            </div>
+            <div class="app-footer">
+              <span class="app-status">Disponível em breve</span>
+              <span class="btn btn-secondary btn-sm" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Ver Detalhes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- App 2: GrathuHealth (Well-being) -->
+        <div class="app-card-wrapper" data-category="wellbeing">
+          <div class="card-glass app-card">
+            <span class="app-badge badge-well">Bem-estar</span>
+            <div class="app-header">
+              <img src="assets/icon-grathuhealth.svg" alt="GrathuHealth Icon" class="app-icon">
+              <div class="app-meta">
+                <h3>GrathuHealth</h3>
+                <span class="app-tagline">Gerenciador de Saúde Criptografado</span>
+              </div>
+            </div>
+            <div class="app-body">
+              <p>Seu assistente offline-first para controle total de rotinas médicas e de bem-estar. Monitore seus sintomas físicos detalhadamente por nível de intensidade, gerencie horários de medicamentos controlados com alarmes inteligentes e monte seu diário de nutrição com fotos e acompanhamento calórico diário.</p>
+              <ul class="app-features">
+                <li>Banco de dados criptografado localmente via SQLCipher (AES-256)</li>
+                <li>Backup em nuvem no Google Drive com chave criptografada exclusiva</li>
+                <li>Alerta automático configurável para cuidadores via WhatsApp</li>
+                <li>Exportação mesclada de relatórios de saúde em PDF ou Excel</li>
+              </ul>
+            </div>
+            <div class="app-footer">
+              <span class="app-status">Disponível em breve</span>
+              <span class="btn btn-secondary btn-sm" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Ver Detalhes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- App 3: MailDash (Productivity) -->
+        <div class="app-card-wrapper" data-category="productivity">
+          <div class="card-glass app-card">
+            <span class="app-badge badge-prod">Produtividade</span>
+            <div class="app-header">
+              <img src="assets/icon-maildash.svg" alt="MailDash Icon" class="app-icon">
+              <div class="app-meta">
+                <h3>MailDash</h3>
+                <span class="app-tagline">Painel de Monitoramento via E-mail</span>
+              </div>
+            </div>
+            <div class="app-body">
+              <p>Mantenha-se informado sobre os seus servidores e rotinas automáticas de forma visual. O MailDash lê e-mails específicos recebidos na sua caixa de entrada, agrupa-os por assunto de maneira inteligente e atualiza em tempo real um painel de abas dinâmico com o conteúdo HTML ou dados brutos em JSON.</p>
+              <ul class="app-features">
+                <li>Compatível com servidores IMAP, POP3 e Microsoft Exchange</li>
+                <li>Segurança aprimorada com suporte para OAuth (Google & Microsoft)</li>
+                <li>Serviço periódico de polling em background a cada 5 minutos</li>
+                <li>Notificações locais instantâneas a cada alteração de status</li>
+              </ul>
+            </div>
+            <div class="app-footer">
+              <span class="app-status">Disponível em breve</span>
+              <span class="btn btn-secondary btn-sm" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Ver Detalhes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- App 4: RiverCrash 1944 (Games) -->
+        <div class="app-card-wrapper" data-category="games">
+          <div class="card-glass app-card">
+            <span class="app-badge badge-fun">Jogo</span>
+            <div class="app-header">
+              <img src="assets/icon-rivercrash.svg" alt="RiverCrash 1944 Icon" class="app-icon">
+              <div class="app-meta">
+                <h3>RiverCrash 1944</h3>
+                <span class="app-tagline">Arcade de Sobrevivência Retro</span>
+              </div>
+            </div>
+            <div class="app-body">
+              <p>Pilote e corra contra o tempo no clássico fliperama. Após uma queda de avião militar em 1944, você precisa navegar por rios turbulentos, desviar de obstáculos perigosos deslizando diagonalmente para pular e atirar em inimigos, coletando mantimentos (rádios, kit médicos, comida) para resgatar sua base.</p>
+              <ul class="app-features">
+                <li>Visual estilizado de gabinete de arcade com suporte a 12 idiomas</li>
+                <li>Física dinâmica para pulos nas diagonais e toques para disparos</li>
+                <li>Controle de carga de mochila com itens históricos</li>
+                <li>Trilha sonora e efeitos de som clássicos retrô de alta imersão</li>
+              </ul>
+            </div>
+            <div class="app-footer">
+              <span class="app-status">Disponível em breve</span>
+              <span class="btn btn-secondary btn-sm" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Ver Detalhes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- App 5: TasteNote (Well-being) -->
+        <div class="app-card-wrapper" data-category="wellbeing">
+          <div class="card-glass app-card">
+            <span class="app-badge badge-well">Estilo de Vida</span>
+            <div class="app-header">
+              <img src="assets/icon-tastenote.svg" alt="TasteNote Icon" class="app-icon">
+              <div class="app-meta">
+                <h3>TasteNote</h3>
+                <span class="app-tagline">Diário de Degustação de Bebidas</span>
+              </div>
+            </div>
+            <div class="app-body">
+              <p>Colecione e avalie suas bebidas favoritas em um só lugar. Ideal para apreciadores de vinhos, cafés especiais, chás finos, cervejas artesanais e destilados (como whisky, gin e cachaça). Registre as características técnicas de marca, variedade, safra, além de capturar fotos de rótulos e pontuar suas avaliações.</p>
+              <ul class="app-features">
+                <li>Banco de dados criptografado localmente com tecnologia SQLCipher</li>
+                <li>Painel com estatísticas de nota média e de melhores bebidas</li>
+                <li>Cadastro rápido e prático com categorias customizáveis</li>
+                <li>Compartilhamento instantâneo das fichas técnicas com amigos</li>
+              </ul>
+            </div>
+            <div class="app-footer">
+              <span class="app-status">Disponível em breve</span>
+              <span class="btn btn-secondary btn-sm" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Ver Detalhes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container contact-layout">
+      <!-- Info Left -->
+      <div class="contact-info">
+        <h2>Fale com os desenvolvedores</h2>
+        <p>Deseja enviar sugestões, reportar problemas de funcionamento ou propor parcerias de negócios? Preencha o formulário e nossa equipe entrará em contato prontamente.</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-text">
+              <h4>E-mail de Suporte</h4>
+              <p><a href="mailto:contato.grathu@gmail.com" id="contactEmail">contato.grathu@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🌐</div>
+            <div class="contact-text">
+              <h4>Domínios Oficiais</h4>
+              <p>grathu.com | grathu.com.br</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">
+              <h4>Localização</h4>
+              <p>Brasil</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Right -->
+      <div class="card-glass">
+        <form class="contact-form" id="contactForm">
+          <div class="form-status-msg" id="formStatus"></div>
+          
+          <div class="form-group">
+            <label for="name">Nome completo</label>
+            <input type="text" id="name" class="form-control" placeholder="Seu nome completo" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">E-mail para contato</label>
+            <input type="email" id="email" class="form-control" placeholder="exemplo@email.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Assunto</label>
+            <input type="text" id="subject" class="form-control" placeholder="Assunto da mensagem" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" class="form-control" placeholder="Escreva sua mensagem aqui..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" id="btnSubmitForm" style="align-self: flex-start; padding: 0.9rem 2rem;">Enviar Mensagem</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <a href="#home" class="logo" id="footerLogo">
+            <img src="assets/Grathu_logo.png" alt="grathu Logo">
+          </a>
+          <p>Estúdio focado no desenvolvimento de ferramentas seguras e jogos desafiadores para transformar sua experiência móvel diária.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#home" id="footerLinkHome">Início</a></li>
+            <li><a href="#pillars" id="footerLinkPillars">Pilares</a></li>
+            <li><a href="#apps" id="footerLinkApps">Nossos Apps</a></li>
+            <li><a href="#contact" id="footerLinkContact">Contato</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html" id="footerLinkPrivacy">Política de Privacidade</a></li>
+            <li><a href="terms.html" id="footerLinkTerms">Termos de Uso</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Nossos Canais</h4>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Google Play Console" id="socialPlayStore">🎮</a>
+            <a href="#" class="social-link" aria-label="GitHub" id="socialGithub">💻</a>
+            <a href="mailto:contato.grathu@gmail.com" class="social-link" aria-label="Email" id="socialMail">✉️</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 grathu. Todos os direitos reservados. Domínios oficiais: <a href="https://grathu.com" style="color: inherit; text-decoration: none;">grathu.com</a> / <a href="https://grathu.com.br" style="color: inherit; text-decoration: none;">grathu.com.br</a></p>
+        <p>Desenvolvido no Brasil.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
