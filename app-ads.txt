@@ -1,0 +1,24 @@
+# Arquivo app-ads.txt para grathu
+#
+# Este arquivo autoriza as redes de anúncios listadas abaixo a venderem o inventário de anúncios dos seus aplicativos.
+# O crawler da Google Play Store e Apple App Store irá procurar por este arquivo em: https://grathu.com/app-ads.txt
+#
+# Para cada rede de anúncios que você utiliza (ex: AdMob, Unity Ads, AppLovin, etc.), adicione uma linha correspondente.
+# As linhas iniciadas com "#" são comentários e serão ignoradas pelos crawlers.
+
+# -----------------------------------------------------------------------------
+# Google AdMob:
+# 1. Substitua o "pub-0000000000000000" pelo seu ID de publicador real do AdMob.
+#    Você pode encontrar esse ID no painel do AdMob em Configurações > Informações da Conta.
+# 2. O valor "f08c47fec0942fa0" é o ID padrão da autoridade de certificação del Google (TAG ID) e deve ser mantido.
+# -----------------------------------------------------------------------------
+google.com, pub-8129189318564429, DIRECT, f08c47fec0942fa0
+# -----------------------------------------------------------------------------
+# Outras redes de anúncios (Exemplos):
+# Adicione aqui as linhas que cada rede fornece no seu respectivo painel de controle.
+#
+# Exemplo Unity Ads:
+# unity3d.com, <SEU_GAME_ID_OU_PUB_ID>, DIRECT, <TAG_ID>
+# Exemplo AppLovin:
+# applovin.com, <SEU_ACCOUNT_ID>, DIRECT, <TAG_ID>
+# -----------------------------------------------------------------------------
