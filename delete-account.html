@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solicite a exclusão de sua conta e de todos os dados pessoais associados aos aplicativos da grathu.">
+  <meta name="robots" content="noindex, follow">
+  
+  <title>Exclusão de Conta | grathu</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html#home" class="logo" id="deleteLogo">
+        <img src="assets/Grathu_logo.png" alt="grathu Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Início</a></li>
+        <li><a href="index.html#pillars">Pilares</a></li>
+        <li><a href="index.html#apps">Nossos Apps</a></li>
+        <li><a href="index.html#contact">Contato</a></li>
+      </ul>
+      <a href="index.html#contact" class="btn btn-primary" id="deleteCta">Fale Conosco</a>
+    </div>
+  </header>
+
+  <!-- Document Hero -->
+  <section class="doc-hero">
+    <div class="container">
+      <h1>Exclusão de Conta e Dados</h1>
+      <p>Gerencie sua privacidade e solicite a remoção definitiva dos seus registros</p>
+    </div>
+  </section>
+
+  <!-- Document Content -->
+  <main class="doc-content">
+    <div class="container" style="max-width: 800px;">
+      <article class="doc-card" style="margin-bottom: 2rem;">
+        
+        <h2>Solicitação de Exclusão</h2>
+        <p>De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem total controle sobre suas informações. Atualmente, o único aplicativo do estúdio <strong>grathu</strong> que processa ou armazena qualquer informação do usuário em nuvem é o <strong>GrathuHealth</strong> (por meio de backup criptografado do usuário).</p>
+        <p>Ao solicitar a exclusão de sua conta, o backup criptografado em nuvem associado ao seu e-mail será <strong>removido permanentemente</strong> do nosso banco de dados em até <strong>30 dias corridos</strong>.</p>
+        
+        <div style="margin: 2.5rem 0; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 2rem;">
+          <h3 style="margin-bottom: 1.5rem; color: #ffffff;">Formulário de Solicitação</h3>
+          
+          <form id="deleteForm" class="contact-form" style="gap: 1.5rem;">
+            <div class="form-status-msg" id="deleteFormStatus" style="margin-bottom: 1rem;"></div>
+            
+            <div class="form-group">
+              <label for="appSelect">Selecione o Aplicativo</label>
+              <select id="appSelect" class="form-control" style="background-color: #0b0c10; cursor: pointer;" required>
+                <option value="GrathuHealth" selected>GrathuHealth</option>
+                <option value="Outro App">Outro aplicativo grathu</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="userEmail">E-mail associado à conta</label>
+              <input type="email" id="userEmail" class="form-control" placeholder="exemplo@email.com" required>
+              <small style="color: hsl(var(--text-muted)); font-size: 0.8rem; margin-top: 0.25rem; display: block;">Digite o mesmo e-mail que você utiliza para fazer login ou backup dentro do aplicativo.</small>
+            </div>
+
+            <div class="form-group" style="flex-direction: row; align-items: flex-start; gap: 0.75rem; margin: 0.5rem 0;">
+              <input type="checkbox" id="confirmCheckbox" required style="width: 20px; height: 20px; accent-color: hsl(var(--primary)); cursor: pointer; margin-top: 0.2rem;">
+              <label for="confirmCheckbox" style="font-size: 0.9rem; font-weight: normal; line-height: 1.4; cursor: pointer;">
+                Estou ciente de que esta ação é permanente e irreversível. Meus backups e dados armazenados em nuvem para o aplicativo selecionado serão removidos por completo em até <strong>30 dias</strong>.
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" id="btnSubmitDelete" style="align-self: flex-start; padding: 0.9rem 2rem; margin-top: 0.5rem;">
+              Enviar Solicitação por E-mail
+            </button>
+          </form>
+        </div>
+
+        <div style="background-color: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
+          <h4 style="color: #ffffff; margin-bottom: 0.5rem; font-size: 1rem;">Método Alternativo Manual</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.75rem; line-height: 1.5;">Caso o botão acima não abra o seu cliente de e-mail automaticamente, você pode enviar um e-mail manualmente utilizando as seguintes informações:</p>
+          <ul style="font-size: 0.9rem; margin-left: 1.25rem; line-height: 1.6; color: hsl(var(--text-secondary));">
+            <li><strong>Destinatário:</strong> <a href="mailto:contato.grathu@gmail.com" style="color: hsl(var(--primary)); text-decoration: none;">contato.grathu@gmail.com</a></li>
+            <li><strong>Assunto:</strong> Solicitação de Exclusão de Conta - [NOME DO APLICATIVO]</li>
+            <li><strong>Corpo do e-mail:</strong> Informar o e-mail cadastrado e solicitar formalmente a remoção permanente dos dados associados sob a LGPD.</li>
+          </ul>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <a href="index.html#home" class="logo" id="deleteFooterLogo">
+            <img src="assets/Grathu_logo.png" alt="grathu Logo">
+          </a>
+          <p>Estúdio focado no desenvolvimento de ferramentas seguras e jogos desafiadores para transformar sua experiência móvel diária.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home" id="dNavHome">Início</a></li>
+            <li><a href="index.html#pillars" id="dNavPillars">Pilares</a></li>
+            <li><a href="index.html#apps" id="dNavApps">Nossos Apps</a></li>
+            <li><a href="index.html#contact" id="dNavContact">Contato</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html" id="dNavPrivacy">Política de Privacidade</a></li>
+            <li><a href="terms.html" id="dNavTerms">Termos de Uso</a></li>
+            <li><a href="delete-account.html" id="dNavDeleteAccount" class="active">Exclusão de Conta</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Nossos Canais</h4>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Google Play Console" id="dSocialPlay">🎮</a>
+            <a href="#" class="social-link" aria-label="GitHub" id="dSocialGit">💻</a>
+            <a href="mailto:contato.grathu@gmail.com" class="social-link" aria-label="Email" id="dSocialMail">✉️</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 grathu. Todos os direitos reservados. Domínios oficiais: <a href="https://grathu.com" style="color: inherit; text-decoration: none;">grathu.com</a> / <a href="https://grathu.com.br" style="color: inherit; text-decoration: none;">grathu.com.br</a></p>
+        <p>Desenvolvido no Brasil.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const deleteForm = document.getElementById('deleteForm');
+      const formStatus = document.getElementById('deleteFormStatus');
+
+      if (deleteForm && formStatus) {
+        deleteForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const app = document.getElementById('appSelect').value;
+          const email = document.getElementById('userEmail').value;
+          const confirmCheckbox = document.getElementById('confirmCheckbox').checked;
+
+          if (!email || !confirmCheckbox) {
+            formStatus.className = 'form-status-msg error';
+            formStatus.innerHTML = 'Por favor, preencha todos os campos obrigatórios e confirme o consentimento.';
+            formStatus.style.display = 'block';
+            return;
+          }
+
+          // Generate mailto parameters
+          const recipient = 'contato.grathu@gmail.com';
+          const subject = encodeURIComponent(`Solicitação de Exclusão de Conta - ${app}`);
+          
+          const bodyMessage = `Olá Equipe Grathu,
+
+Solicito formalmente a exclusão da minha conta e a eliminação permanente de todos os dados pessoais associados.
+
+DETALHES DA SOLICITAÇÃO:
+- Aplicativo: ${app}
+- E-mail da Conta: ${email}
+
+Declaro estar ciente de que esta ação é permanente e de que a conclusão do processo ocorrerá em até 30 dias corridos.
+
+Atenciosamente,`;
+
+          const body = encodeURIComponent(bodyMessage);
+          
+          // Open default mail client
+          window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+          // Visual feedback
+          formStatus.className = 'form-status-msg success';
+          formStatus.innerHTML = 'Solicitação gerada! Se o seu cliente de e-mail não abriu automaticamente, envie um e-mail para <strong>contato.grathu@gmail.com</strong> informando seu e-mail e o aplicativo.';
+          formStatus.style.display = 'block';
+          
+          // Reset form fields
+          deleteForm.reset();
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
