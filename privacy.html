@@ -37,7 +37,7 @@
   <section class="doc-hero">
     <div class="container">
       <h1>Política de Privacidade</h1>
-      <p>Última atualização: 24 de Junho de 2026</p>
+      <p>Última atualização: 31 de Julho de 2026</p>
     </div>
   </section>
 
@@ -82,6 +82,7 @@
         <p>Nossos aplicativos podem integrar SDKs e ferramentas de parceiros terceirizados para análises estatísticas e exibição de anúncios. Esses parceiros podem coletar informações diretamente do seu dispositivo. Recomendamos a leitura das políticas de privacidade desses provedores:</p>
         <ul>
           <li><strong>Google Play Services:</strong> Utilizado para autenticação de contas de jogador e serviços do sistema operacional. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: none;">Política de Privacidade do Google</a>.</li>
+          <li><strong>Google Sign-In e Google Drive API:</strong> Alguns de nossos aplicativos (como <strong>GrathuHealth</strong>, <strong>ClickCook</strong> e <strong>Grauto</strong>) oferecem a funcionalidade opcional de backup em nuvem. Para isso, o aplicativo solicita autenticação na sua Conta Google via Google Sign-In e utiliza a Google Drive API exclusivamente para armazenar e recuperar seus dados de backup na pasta privada do aplicativo (<code>appDataFolder</code>), inacessível a terceiros. Nenhum outro dado da sua conta Google é acessado, coletado ou compartilhado.</li>
           <li><strong>Google Analytics for Firebase:</strong> Utilizado para entender o engajamento dos usuários e logs de performance.</li>
           <li><strong>AdMob (se aplicável):</strong> Utilizado para veiculação de anúncios dentro de nossos Serviços gratuitos.</li>
         </ul>
@@ -95,14 +96,14 @@
         </ul>
 
         <h2>6. Segurança de Dados (Offline-First)</h2>
-        <p>Nossos aplicativos de saúde e produtividade pessoal (como GrathuHealth e TasteNote) operam primariamente no modo <strong>offline-first</strong>. Seus dados locais são gravados de forma segura utilizando bancos criptografados em **AES-256** (SQLCipher), garantindo que nem mesmo nós tenhamos acesso físico aos seus registros locais sem a sua senha e autorização.</p>
+        <p>Nossos aplicativos de saúde e produtividade pessoal (como GrathuHealth, ClickCook e TasteNote) operam primariamente no modo <strong>offline-first</strong>. Seus dados locais são gravados de forma segura utilizando bancos criptografados em <strong>AES-256</strong> (SQLCipher), garantindo que nem mesmo nós tenhamos acesso físico aos seus registros locais sem a sua senha e autorização.</p>
         <p>Adotamos medidas administrativas, técnicas e físicas de ponta para proteger suas informações contra perda, roubo, acesso não autorizado, divulgação, cópia ou alteração. No entanto, lembre-se de que nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro.</p>
 
         <h2>7. Retenção e Exclusão de Dados (Data Retention and Deletion Policy)</h2>
         <p>Em conformidade com as diretrizes de dados do usuário do Google Play e a LGPD, detalhamos abaixo nossas práticas sobre o tempo de retenção e os procedimentos para exclusão das informações em nossos aplicativos (com destaque para o <strong>GrathuHealth</strong>):</p>
 
         <h3>7.1 Retenção de Dados Locais no Dispositivo</h3>
-        <p>Em nossos aplicativos como o <strong>GrathuHealth</strong> e o <strong>TasteNote</strong>, os registros armazenados localmente no dispositivo (como históricos de saúde, medicamentos, consultas, exames, refeições e perfis) permanecem guardados de forma criptografada (AES-256 / SQLCipher) enquanto o aplicativo estiver instalado em seu aparelho. Você pode excluir qualquer informação diretamente na interface do app ou remover todos os dados locais instantaneamente ao desinstalar o aplicativo.</p>
+        <p>Em nossos aplicativos como o <strong>GrathuHealth</strong>, <strong>ClickCook</strong> e o <strong>TasteNote</strong>, os registros armazenados localmente no dispositivo (como históricos de saúde, medicamentos, consultas, exames, receitas, refeições e perfis) permanecem guardados de forma criptografada (AES-256 / SQLCipher) enquanto o aplicativo estiver instalado em seu aparelho. Você pode excluir qualquer informação diretamente na interface do app ou remover todos os dados locais instantaneamente ao desinstalar o aplicativo.</p>
 
         <h3>7.2 Retenção de Dados em Nuvem (GrathuHealth - Backup e Acompanhantes)</h3>
         <p>Atualmente, o único aplicativo do estúdio <strong>grathu</strong> que processa ou armazena dados em nuvem a pedido do usuário é o <strong>GrathuHealth</strong>. Quando você ativa voluntariamente os recursos de backup em nuvem (via Google Drive ou Supabase) ou o sistema de sincronização de acompanhantes, seus dados criptografados são mantidos em servidores seguros enquanto sua conta estiver ativa para viabilizar esses serviços.</p>
