@@ -37,7 +37,7 @@
   <section class="doc-hero">
     <div class="container">
       <h1>Política de Privacidade</h1>
-      <p>Última atualização: 31 de Julho de 2026</p>
+      <p>Última atualização: 24 de Setembro de 2026</p>
     </div>
   </section>
 
@@ -87,7 +87,35 @@
           <li><strong>AdMob (se aplicável):</strong> Utilizado para veiculação de anúncios dentro de nossos Serviços gratuitos.</li>
         </ul>
 
-        <h2>5. Compartilhamento de Dados</h2>
+        <h2>5. Autenticação OAuth 2.0 e Integração com E-mails (MailDash)</h2>
+        <p>O aplicativo <strong>MailDash</strong> oferece integração opcional com contas de e-mail por meio do protocolo seguro <strong>OAuth 2.0</strong> (Google e Microsoft). Abaixo detalhamos como tratamos essas informações:</p>
+        
+        <h3>5.1 Credenciais e Senhas</h3>
+        <p>O <strong>MailDash nunca tem acesso, não solicita e não armazena a sua senha</strong> da Conta Google ou Microsoft. O processo de autenticação é realizado diretamente nas páginas oficiais do respectivo provedor. O aplicativo recebe e armazena de forma criptografada localmente no dispositivo apenas tokens de autenticação temporários (OAuth tokens) necessários para viabilizar as consultas autorizadas.</p>
+
+        <h3>5.2 Escopo e Finalidade do Acesso aos E-mails</h3>
+        <p>O acesso concedido via OAuth 2.0 (como leitura de mensagens via Gmail API ou Microsoft Graph) é utilizado <strong>estritamente e exclusivamente</strong> para que o aplicativo possa ler mensagens relevantes identificadas pelo usuário (por assunto ou remetente) e gerar os painéis visuais de monitoramento e alertas locais no dispositivo.</p>
+
+        <h3>5.3 Processamento Local e Não Compartilhamento</h3>
+        <p>Todo o processamento das mensagens de e-mail é realizado <strong>100% localmente no dispositivo do usuário</strong>. Os conteúdos e dados de e-mail:</p>
+        <ul>
+          <li><strong>Nunca</strong> são transmitidos para servidores da grathu;</li>
+          <li><strong>Nunca</strong> são vendidos, alugados ou comercializados com terceiros;</li>
+          <li><strong>Nunca</strong> são utilizados para exibição de publicidade direcionada;</li>
+          <li><strong>Nunca</strong> são utilizados para treinar modelos de inteligência artificial ou machine learning generalistas.</li>
+        </ul>
+
+        <h3>5.4 Declaração de Conformidade com o Google (Limited Use Disclosure)</h3>
+        <p>O uso e a transferência para qualquer outro aplicativo de informações recebidas das APIs do Google pelo <strong>MailDash</strong> atenderão integralmente à <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: none;">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os <strong>requisitos de Uso Limitado (Limited Use Requirements)</strong>.</p>
+
+        <h3>5.5 Revogação de Acesso</h3>
+        <p>Você pode revogar a permissão de acesso do MailDash à sua conta a qualquer momento:</p>
+        <ul>
+          <li><strong>Google:</strong> Acesse <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: none;">myaccount.google.com/permissions</a> e remova o acesso do aplicativo MailDash.</li>
+          <li><strong>Microsoft:</strong> Acesse <a href="https://account.microsoft.com/privacy" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: none;">account.microsoft.com/privacy</a> e gerencie os aplicativos conectados.</li>
+        </ul>
+
+        <h2>6. Compartilhamento de Dados</h2>
         <p>Nós <strong>não vendemos, alugamos ou comercializamos</strong> suas informações pessoais com terceiros. Suas informações apenas poderão ser compartilhadas nos seguintes casos limitados:</p>
         <ul>
           <li>Com prestadores de serviços de confiança contratados para dar suporte às nossas operações diárias (como hospedagem de sites e análise de estatísticas);</li>
@@ -95,38 +123,41 @@
           <li>Para proteger e defender os direitos, propriedade ou segurança da grathu e de seus usuários.</li>
         </ul>
 
-        <h2>6. Segurança de Dados (Offline-First)</h2>
-        <p>Nossos aplicativos de saúde e produtividade pessoal (como GrathuHealth, ClickCook e TasteNote) operam primariamente no modo <strong>offline-first</strong>. Seus dados locais são gravados de forma segura utilizando bancos criptografados em <strong>AES-256</strong> (SQLCipher), garantindo que nem mesmo nós tenhamos acesso físico aos seus registros locais sem a sua senha e autorização.</p>
+        <h2>7. Segurança de Dados (Offline-First e Processamento Local)</h2>
+        <p>Nossos aplicativos de saúde e produtividade pessoal (como GrathuHealth, ClickCook, TasteNote e MailDash) operam primariamente no modo <strong>offline-first</strong> ou com processamento estritamente local. Seus dados e registros são armazenados no próprio dispositivo, garantindo que nem mesmo nós tenhamos acesso aos seus conteúdos sem a sua autorização expressa.</p>
         <p>Adotamos medidas administrativas, técnicas e físicas de ponta para proteger suas informações contra perda, roubo, acesso não autorizado, divulgação, cópia ou alteração. No entanto, lembre-se de que nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro.</p>
 
-        <h2>7. Retenção e Exclusão de Dados (Data Retention and Deletion Policy)</h2>
-        <p>Em conformidade com as diretrizes de dados do usuário do Google Play e a LGPD, detalhamos abaixo nossas práticas sobre o tempo de retenção e os procedimentos para exclusão das informações em nossos aplicativos (com destaque para o <strong>GrathuHealth</strong>):</p>
+        <h2>8. Retenção e Exclusão de Dados (Data Retention and Deletion Policy)</h2>
+        <p>Em conformidade com as diretrizes de dados do usuário do Google Play e a LGPD, detalhamos abaixo nossas práticas sobre o tempo de retenção e os procedimentos para exclusão das informações em nossos aplicativos:</p>
 
-        <h3>7.1 Retenção de Dados Locais no Dispositivo</h3>
-        <p>Em nossos aplicativos como o <strong>GrathuHealth</strong>, <strong>ClickCook</strong> e o <strong>TasteNote</strong>, os registros armazenados localmente no dispositivo (como históricos de saúde, medicamentos, consultas, exames, receitas, refeições e perfis) permanecem guardados de forma criptografada (AES-256 / SQLCipher) enquanto o aplicativo estiver instalado em seu aparelho. Você pode excluir qualquer informação diretamente na interface do app ou remover todos os dados locais instantaneamente ao desinstalar o aplicativo.</p>
+        <h3>8.1 Retenção de Dados Locais no Dispositivo</h3>
+        <p>Em aplicativos como <strong>GrathuHealth</strong>, <strong>ClickCook</strong>, <strong>TasteNote</strong> e <strong>MailDash</strong>, todos os registros, históricos e tokens de autenticação são mantidos localmente no aparelho enquanto o aplicativo estiver instalado. Você pode excluir qualquer informação diretamente na interface do app ou remover todos os dados instantaneamente desinstalando o aplicativo ou limpando os dados nas configurações do seu sistema operacional.</p>
 
-        <h3>7.2 Retenção de Dados em Nuvem (GrathuHealth - Backup e Acompanhantes)</h3>
+        <h3>8.2 Processamento de E-mails e Tokens no MailDash</h3>
+        <p>O <strong>MailDash</strong> não mantém servidores para coleta ou persistência de mensagens de e-mail. Os tokens de autenticação OAuth permanecem armazenados de maneira segura e criptografada apenas na memória privada do dispositivo móvel. A desconexão da conta no app ou a revogação da permissão na sua Conta Google ou Microsoft elimina imediatamente a capacidade de acesso do aplicativo.</p>
+
+        <h3>8.3 Retenção de Dados em Nuvem (GrathuHealth - Backup e Acompanhantes)</h3>
         <p>Atualmente, o único aplicativo do estúdio <strong>grathu</strong> que processa ou armazena dados em nuvem a pedido do usuário é o <strong>GrathuHealth</strong>. Quando você ativa voluntariamente os recursos de backup em nuvem (via Google Drive ou Supabase) ou o sistema de sincronização de acompanhantes, seus dados criptografados são mantidos em servidores seguros enquanto sua conta estiver ativa para viabilizar esses serviços.</p>
 
-        <h3>7.3 Solicitação de Exclusão Definitiva de Conta e Dados em Nuvem</h3>
-        <p>O usuário do <strong>GrathuHealth</strong> tem o direito de solicitar a exclusão permanente de sua conta e a eliminação completa dos seus dados em nuvem a qualquer momento através das seguintes opções disponíveis:</p>
+        <h3>8.4 Solicitação de Exclusão Definitiva de Conta e Dados em Nuvem</h3>
+        <p>O usuário tem o direito de solicitar a exclusão permanente de sua conta e a eliminação completa dos seus dados em nuvem a qualquer momento através das seguintes opções disponíveis:</p>
         <ul>
           <li><strong>Pela Web (Formulário Oficial):</strong> Acesse nosso portal dedicado de exclusão em <a href="delete-account.html" style="color: hsl(var(--primary)); text-decoration: none;">grathu.com/delete-account.html</a> e preencha o formulário com o e-mail da sua conta;</li>
-          <li><strong>Por E-mail de Suporte:</strong> Envie um e-mail direto para <a href="mailto:contato.grathu@gmail.com" style="color: hsl(var(--primary)); text-decoration: none;">contato.grathu@gmail.com</a> com o assunto "Exclusão de Conta GrathuHealth" informando o e-mail cadastrado;</li>
-          <li><strong>Gerenciamento no Aplicativo:</strong> No menu de <em>Ajustes / Configurações</em> do aplicativo, você pode encerrar a sessão da Conta Google a qualquer momento, interrompendo a realização de backups e a sincronização com acompanhantes. Para a exclusão definitiva e irrecuperável dos arquivos de backup já armazenados na nuvem, utilize o formulário web ou envie a solicitação por e-mail.</li>
+          <li><strong>Por E-mail de Suporte:</strong> Envie um e-mail direto para <a href="mailto:contato.grathu@gmail.com" style="color: hsl(var(--primary)); text-decoration: none;">contato.grathu@gmail.com</a> com o assunto "Exclusão de Conta" informando o aplicativo e o e-mail cadastrado;</li>
+          <li><strong>Gerenciamento no Aplicativo:</strong> No menu de configurações dos aplicativos, você pode encerrar a sessão de contas conectadas (Google ou Microsoft) a qualquer momento, interrompendo backups ou sincronizações.</li>
         </ul>
-        <p>Após o recebimento da solicitação, todos os backups e registros em nuvem do <strong>GrathuHealth</strong> vinculados ao e-mail informado serão <strong>eliminados permanentemente em até 30 dias corridos</strong>.</p>
+        <p>Após o recebimento da solicitação, todos os backups e registros em nuvem vinculados ao e-mail informado serão <strong>eliminados permanentemente em até 30 dias corridos</strong>.</p>
 
-        <h2>8. Direitos dos Usuários (LGPD)</h2>
+        <h2>9. Direitos dos Usuários (LGPD)</h2>
         <p>De acordo com a Lei Geral de Proteção de Dados (LGPD) do Brasil, você tem direito a confirmar a existência de tratamento de seus dados, acessar, corrigir dados incompletos ou inexatos, ou solicitar a exclusão de seus dados pessoais sob nosso controle. Para exercer esses direitos, entre em contato conosco pelo e-mail de suporte.</p>
 
-        <h2>9. Privacidade de Crianças</h2>
+        <h2>10. Privacidade de Crianças</h2>
         <p>Nossos aplicativos de saúde e produtividade não coletam dados pessoais de menores de 13 anos. Para os nossos jogos que podem atrair o público infantil, não coletamos intencionalmente informações de identificação pessoal de crianças. Se tomarmos conhecimento de que coletamos dados pessoais de crianças sem consentimento dos pais, tomaremos medidas imediatas para remover essas informações de nossos servidores.</p>
 
-        <h2>10. Alterações nesta Política</h2>
+        <h2>11. Alterações nesta Política</h2>
         <p>Podemos atualizar nossa Política de Privacidade de tempos em tempos. Recomendamos que você revise esta página periodicamente para verificar quaisquer alterações. As atualizações passam a vigorar imediatamente após serem publicadas nesta página.</p>
 
-        <h2>11. Fale Conosco</h2>
+        <h2>12. Fale Conosco</h2>
         <p>Se você tiver alguma dúvida sobre esta Política de Privacidade ou sobre as práticas adotadas pela <strong>grathu</strong>, entre em contato conosco:</p>
         <ul>
           <li>Por e-mail: <a href="mailto:contato.grathu@gmail.com" style="color: hsl(var(--primary)); text-decoration: none;">contato.grathu@gmail.com</a></li>
