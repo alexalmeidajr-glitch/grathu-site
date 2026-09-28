@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MailDash - Transforme e-mails de alertas e monitoramento em painéis visuais interativos diretamente no seu celular. Desenvolvido por grathu.">
+  <meta name="keywords" content="MailDash, monitoramento por email, painel de email, imap dashboard, google oauth email, grathu apps">
+  <meta name="author" content="grathu">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://grathu.com/maildash.html">
+  <meta property="og:title" content="MailDash | Painéis de Monitoramento por E-mail - grathu">
+  <meta property="og:description" content="Transforme e-mails de alerta e rotinas automáticas em abas dinâmicas e painéis visuais no seu Android.">
+  <meta property="og:image" content="assets/icon-maildash.png">
+
+  <title>MailDash | Painéis de Monitoramento por E-mail - grathu</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .app-hero {
+      padding: calc(var(--header-height) + 3rem) 0 4rem;
+      text-align: center;
+      position: relative;
+    }
+    .app-hero-icon {
+      width: 110px;
+      height: 110px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0, 229, 188, 0.25);
+      margin-bottom: 1.5rem;
+      border: 2px solid rgba(0, 229, 188, 0.4);
+    }
+    .app-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+    .app-hero p.lead {
+      font-size: 1.25rem;
+      color: hsl(var(--text-secondary));
+      max-width: 720px;
+      margin: 0 auto 2rem;
+    }
+    .app-badges {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .badge-pill {
+      background: rgba(0, 229, 188, 0.1);
+      border: 1px solid rgba(0, 229, 188, 0.3);
+      color: hsl(var(--primary));
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+    .feature-card {
+      background: hsl(var(--bg-card));
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: var(--transition-normal);
+    }
+    .feature-card:hover {
+      background: hsl(var(--bg-card-hover));
+      border-color: rgba(0, 229, 188, 0.3);
+      transform: translateY(-4px);
+    }
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .feature-card h3 {
+      font-size: 1.25rem;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+    .feature-card p {
+      color: hsl(var(--text-muted));
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .compliance-box {
+      background: rgba(0, 229, 188, 0.05);
+      border: 1px solid rgba(0, 229, 188, 0.25);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      margin: 4rem 0 2rem;
+      text-align: left;
+    }
+    .compliance-box h2 {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .compliance-box p {
+      color: hsl(var(--text-secondary));
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .compliance-box ul {
+      list-style: none;
+      margin: 1.25rem 0;
+    }
+    .compliance-box li {
+      color: hsl(var(--text-secondary));
+      padding-left: 1.75rem;
+      position: relative;
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+    .compliance-box li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: hsl(var(--primary));
+      font-weight: bold;
+    }
+    .compliance-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html#home" class="logo">
+        <img src="assets/Grathu_logo.png" alt="grathu Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Início</a></li>
+        <li><a href="index.html#apps">Todos os Apps</a></li>
+        <li><a href="privacy.html">Privacidade</a></li>
+        <li><a href="terms.html">Termos</a></li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.grathu.maildash" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Baixar MailDash</a>
+    </div>
+  </header>
+
+  <!-- MailDash Hero -->
+  <section class="app-hero">
+    <div class="container">
+      <img src="assets/icon-maildash.png" alt="Ícone do MailDash" class="app-hero-icon">
+      <h1>MailDash</h1>
+      <p class="lead">Transforme relatórios, alertas de servidores e notificações de e-mail em painéis visuais dinâmicos em tempo real.</p>
+      
+      <div class="app-badges">
+        <span class="badge-pill">Produtividade Mobile</span>
+        <span class="badge-pill">Google & Microsoft OAuth 2.0</span>
+        <span class="badge-pill">Processamento 100% Local</span>
+        <span class="badge-pill">Segurança IMAP SSL</span>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://play.google.com/store/apps/details?id=com.grathu.maildash" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Disponível no Google Play
+        </a>
+        <a href="privacy.html" class="btn btn-secondary">Política de Privacidade</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <main class="container" style="padding-bottom: 5rem;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h2 style="font-size: 2rem; color: #ffffff;">Funcionalidades Principais</h2>
+      <p style="color: hsl(var(--text-muted)); font-size: 1.05rem;">Como o MailDash otimiza sua rotina de monitoramento</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Abas de Painel por Assunto</h3>
+        <p>O MailDash identifica os e-mails com os prefixos configurados (ex: <em>"Monitoring My Email - Faturamento"</em>) e organiza automaticamente o conteúdo em abas limpas e dedicadas.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Sincronização em Segundo Plano</h3>
+        <p>Verificações periódicas inteligentes mantêm seus indicadores atualizados e emitem notificações resumidas apenas quando novos conteúdos chegarem.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔐</div>
+        <h3>Conexão Segura OAuth 2.0</h3>
+        <p>Conecte com segurança suas contas Google ou Microsoft via OAuth 2.0 nativo. O MailDash nunca solicita, recebe ou armazena a sua senha.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3>Renderização HTML Completa</h3>
+        <p>Tabelas zebradas, alertas coloridos e formatações de relatórios são renderizados perfeitamente na tela do celular de forma responsiva.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🕒</div>
+        <h3>Histórico de Atualizações</h3>
+        <p>Consulte versões anteriores recebidas em cada painel sem a necessidade de pesquisar ou navegar pela caixa de entrada convencional.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Privacidade Offline-First</h3>
+        <p>Todo o processamento ocorre no próprio celular. Não mantemos servidores em nuvem que armazenam suas mensagens ou seus relatórios.</p>
+      </div>
+    </div>
+
+    <!-- Google OAuth & Privacy Compliance Section -->
+    <div class="compliance-box">
+      <h2>Segurança, Privacidade e Uso de Dados do Google</h2>
+      <p>O <strong>MailDash</strong> foi construído respeitando as mais rígidas políticas de proteção de dados e privacidade do usuário:</p>
+      
+      <ul>
+        <li><strong>Acesso Estritamente Técnico:</strong> O acesso concedido via OAuth 2.0 conecta-se via protocolo IMAP seguro diretamente aos servidores do provedor de e-mail exclusivamente para localizar mensagens com os prefixos que você definir.</li>
+        <li><strong>Sem Servidores Intermediários:</strong> As mensagens são processadas e armazenadas estritamente na memória protegida do seu dispositivo Android. Nenhum e-mail ou dado pessoal é transferido para servidores da grathu ou de terceiros.</li>
+        <li><strong>Sem Venda de Dados ou Anúncios Direcionados:</strong> Seus dados de e-mail nunca são compartilhados, vendidos, alugados ou usados para direcionamento publicitário.</li>
+        <li><strong>Conformidade com a Google API Services User Data Policy:</strong> O uso e a transferência para qualquer outro aplicativo de informações recebidas das APIs do Google pelo MailDash aderem integralmente à <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: underline;">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de <strong>Uso Limitado (Limited Use)</strong>.</li>
+      </ul>
+
+      <div class="compliance-links">
+        <a href="privacy.html" class="btn btn-secondary btn-sm" style="font-size: 0.85rem;">Ler Política de Privacidade Completa</a>
+        <a href="terms.html" class="btn btn-secondary btn-sm" style="font-size: 0.85rem;">Termos de Serviço</a>
+        <a href="delete-account.html" class="btn btn-secondary btn-sm" style="font-size: 0.85rem;">Exclusão de Dados</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <a href="index.html#home" class="logo">
+            <img src="assets/Grathu_logo.png" alt="grathu Logo">
+          </a>
+          <p>grathu — Estúdio focado no desenvolvimento de ferramentas seguras e jogos desafiadores para transformar sua experiência móvel diária.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Início</a></li>
+            <li><a href="index.html#apps">Nossos Apps</a></li>
+            <li><a href="privacy.html">Privacidade</a></li>
+            <li><a href="terms.html">Termos de Uso</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Aplicativo</h4>
+          <ul class="footer-links">
+            <li><a href="https://play.google.com/store/apps/details?id=com.grathu.maildash" target="_blank" rel="noopener noreferrer">Google Play Store</a></li>
+            <li><a href="privacy.html">Política de Privacidade</a></li>
+            <li><a href="delete-account.html">Exclusão de Conta</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 grathu. Todos os direitos reservados. MailDash é uma marca do estúdio grathu.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
