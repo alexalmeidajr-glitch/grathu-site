@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de Privacidade oficial do MailDash. Detalhamento completo sobre uso de dados, escopos do Google OAuth e requisitos de Uso Limitado.">
+  <meta name="robots" content="index, follow">
+  
+  <title>Política de Privacidade do MailDash | grathu</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .compliance-card {
+      background: rgba(0, 229, 188, 0.08);
+      border: 1px solid rgba(0, 229, 188, 0.35);
+      border-radius: 14px;
+      padding: 1.75rem;
+      margin: 2rem 0;
+    }
+    .compliance-card h3 {
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+    .compliance-card p {
+      color: hsl(var(--text-secondary));
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.85rem 1rem;
+      text-align: left;
+    }
+    .data-table th {
+      background: rgba(0, 229, 188, 0.1);
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .data-table td {
+      color: hsl(var(--text-secondary));
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html#home" class="logo">
+        <img src="assets/Grathu_logo.png" alt="grathu Logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="maildash.html">MailDash</a></li>
+        <li><a href="index.html#home">Início</a></li>
+        <li><a href="terms.html">Termos de Uso</a></li>
+        <li><a href="delete-account.html">Exclusão de Dados</a></li>
+      </ul>
+      <a href="maildash.html" class="btn btn-primary">Conhecer MailDash</a>
+    </div>
+  </header>
+
+  <!-- Document Hero -->
+  <section class="doc-hero">
+    <div class="container">
+      <h1>Política de Privacidade do MailDash</h1>
+      <p>Detalhamento sobre coleta, uso, armazenamento, segurança e uso limitado de dados da Conta Google</p>
+      <p style="font-size: 0.85rem; color: hsl(var(--text-muted)); margin-top: 0.5rem;">Última atualização: 28 de Setembro de 2026</p>
+    </div>
+  </section>
+
+  <!-- Document Content -->
+  <main class="doc-content">
+    <div class="container">
+      <article class="doc-card">
+        
+        <h2>1. Visão Geral do Aplicativo</h2>
+        <p>O <strong>MailDash</strong> é um aplicativo utilitário móvel para o sistema operacional Android, desenvolvido e operado pela <strong>grathu</strong> (<a href="https://grathu.com" style="color: hsl(var(--primary)); text-decoration: none;">grathu.com</a>). O aplicativo tem como finalidade primordial converter e-mails automatizados de monitoramento (como alertas de servidores, relatórios diários de sistemas ERP e indicadores de rotina) em painéis visuais organizados em abas dinâmicas diretamente no dispositivo do usuário.</p>
+        <p>Esta Política de Privacidade descreve de maneira transparente e detalhada como o <strong>MailDash</strong> acessa, coleta, utiliza, armazena, protege e descarta informações dos usuários, com especial ênfase nos dados acessados através dos serviços de autenticação e APIs do Google (Google OAuth 2.0).</p>
+
+        <h2>2. Dados da Conta Google que Acessamos e Coletamos</h2>
+        <p>O MailDash solicita permissões de acesso através do fluxo oficial de autenticação <strong>Google Sign-In / OAuth 2.0</strong>. O aplicativo acessa apenas os dados estritamente necessários para viabilizar as suas funções de monitoramento:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Dado Acessado</th>
+              <th>Escopo do Google OAuth</th>
+              <th>Finalidade Específica no MailDash</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Endereço de E-mail e Perfil Básico</strong></td>
+              <td><code>email</code>, <code>profile</code>, <code>openid</code></td>
+              <td>Identificar a conta conectada, exibir o endereço do usuário na interface de configurações e autenticar a sessão.</td>
+            </tr>
+            <tr>
+              <td><strong>Acesso ao Correio via IMAP (Mensagens, Assuntos, Datas e Corpo)</strong></td>
+              <td><code>https://mail.google.com/</code></td>
+              <td>Conectar-se diretamente ao servidor IMAP oficial do Gmail (<code>imap.gmail.com:993</code>) via SASL XOAUTH2 para localizar e ler <strong>exclusivamente</strong> e-mails com os prefixos de assunto configurados pelo usuário (ex: <em>"Monitoring My Email"</em>) e renderizar seus relatórios em HTML ou texto nas abas do painel.</td>
+            </tr>
+            <tr>
+              <td><strong>Tokens OAuth 2.0 de Acesso</strong></td>
+              <td>Credenciais de autorização</td>
+              <td>Autorizar as requisições periódicas de sincronização diretamente entre o celular do usuário e os servidores de e-mail do Google.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Dados que o MailDash NÃO Acessa</h3>
+        <ul>
+          <li><strong>O MailDash NÃO acessa senhas:</strong> A autenticação é delegada inteiramente às telas oficiais de login do Google; o app nunca recebe nem armazena sua senha.</li>
+          <li><strong>O MailDash NÃO lê contatos, agenda ou arquivos do Google Drive.</strong></li>
+          <li><strong>O MailDash NÃO processa e-mails não relacionados:</strong> Mensagens que não possuam os prefixos de assunto definidos pelo próprio usuário são completamente ignoradas e descartadas.</li>
+        </ul>
+
+        <h2>3. Como Utilizamos Suas Informações (Finalidade de Uso)</h2>
+        <p>Todos os dados obtidos a partir de contas Google são utilizados <strong>única e exclusivamente</strong> para fornecer as funcionalidades visíveis do aplicativo:</p>
+        <ul>
+          <li><strong>Criação de Abas Dinâmicas:</strong> Agrupar mensagens pelo assunto do e-mail para gerar painéis dedicados a cada sistema ou processo monitorado;</li>
+          <li><strong>Renderização Visual de Relatórios:</strong> Exibir o corpo das mensagens (tabelas formatadas em HTML, relatórios de status ou texto simples) dentro da respectiva aba;</li>
+          <li><strong>Notificações Locais de Atualização:</strong> Disparar notificações locais no aparelho quando um painel receber novos dados durante as verificações periódicas;</li>
+          <li><strong>Exclusão Opcional de E-mails Lidos:</strong> Caso o usuário ative expressamente a opção "Excluir e-mail após leitura" nas configurações, o aplicativo envia comando IMAP para marcar como deletada apenas a mensagem de relatório já processada.</li>
+        </ul>
+
+        <h2>4. Armazenamento, Segurança e Arquitetura Local-First (On-Device)</h2>
+        <p>O MailDash foi projetado sob o princípio fundamental de <strong>Privacidade por Design (Privacy by Design)</strong> e processamento estritamente local:</p>
+        <ul>
+          <li><strong>Sem Servidores Intermediários:</strong> A grathu <strong>NÃO</strong> opera servidores intermediários, bancos de dados em nuvem ou serviços externos de coleta para o MailDash. A comunicação de rede ocorre diretamente entre o aplicativo no seu celular e o servidor seguro do Google (<code>imap.gmail.com</code>).</li>
+          <li><strong>Armazenamento Criptografado no Dispositivo:</strong> Tokens de acesso OAuth e o histórico recente dos painéis são gravados exclusivamente na memória protegida do aparelho móvel, utilizando mecanismos de isolamento de processo e armazenamento criptografado do sistema operacional Android.</li>
+          <li><strong>Segurança em Trânsito:</strong> Todas as conexões de rede com os serviços do Google são criptografadas via protocolo seguro TLS/SSL (porta 993).</li>
+        </ul>
+
+        <h2>5. Não Compartilhamento e Não Comercialização de Dados</h2>
+        <p>A grathu e o aplicativo MailDash possuem um compromisso inegociável de proteção de dados:</p>
+        <ul>
+          <li><strong>NÃO Vendemos Dados:</strong> Nunca vendemos, alugamos, comercializamos ou monetizamos dados de usuários do Google ou conteúdos de mensagens sob qualquer hipótese.</li>
+          <li><strong>NÃO Compartilhamos com Terceiros:</strong> Nenhum dado obtido da sua conta Google ou de seus e-mails é transferido ou compartilhado com outras empresas, parceiros comerciais ou servidores de terceiros.</li>
+          <li><strong>NÃO Utilizamos para Publicidade:</strong> Os dados acessados através dos escopos do Google nunca são utilizados para exibição de anúncios publicitários, publicidade direcionada, remarketing ou criação de perfis de marketing.</li>
+          <li><strong>NÃO Utilizamos para Treinamento de Inteligência Artificial:</strong> Nenhum dado de e-mail é utilizado para treinar ou aprimorar modelos de inteligência artificial ou aprendizado de máquina (AI/ML).</li>
+          <li><strong>Acesso Humano Proibido:</strong> Nenhum funcionário ou colaborador da grathu tem acesso visual ou técnico aos e-mails lidos pelo aplicativo em seu dispositivo.</li>
+        </ul>
+
+        <!-- Google Limited Use Disclosure Box -->
+        <div class="compliance-card">
+          <h3>Declaração de Conformidade com os Requisitos de Uso Limitado do Google (Google Limited Use Disclosure)</h3>
+          <p>O uso e a transferência para qualquer outro aplicativo de informações recebidas das APIs do Google pelo aplicativo <strong>MailDash</strong> obedecerão integralmente à <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: underline; font-weight: 600;">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os <strong>requisitos de Uso Limitado (Limited Use requirements)</strong>.</p>
+          <p style="margin-top: 0.75rem; font-style: italic;">"MailDash's use and transfer of information received from Google APIs to any other app will adhere to the Google API Services User Data Policy, including the Limited Use requirements."</p>
+        </div>
+
+        <h2>6. Retenção e Exclusão de Dados</h2>
+        <p>O usuário mantém controle integral e permanente sobre as suas informações:</p>
+        <ul>
+          <li><strong>Desconexão da Conta no App:</strong> A qualquer momento, na tela de configurações do MailDash, o usuário pode clicar em "Desconectar" ou alterar as credenciais. Isso remove e invalida imediatamente os tokens de acesso armazenados no dispositivo.</li>
+          <li><strong>Exclusão ao Desinstalar:</strong> A desinstalação do aplicativo MailDash ou a limpeza dos dados do aplicativo nas configurações do Android apaga permanentemente todos os registros, históricos de painéis e credenciais salvas no aparelho.</li>
+          <li><strong>Revogação pelo Painel de Segurança do Google:</strong> O usuário pode revogar o acesso do MailDash a qualquer momento diretamente no painel de controle da Conta Google acessando: <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: none;">https://myaccount.google.com/permissions</a>.</li>
+        </ul>
+
+        <h2>7. Contato e Encarregado de Privacidade</h2>
+        <p>Se você tiver qualquer pergunta, solicitação ou dúvida referente a esta Política de Privacidade ou ao tratamento de dados pelo MailDash, entre em contato diretamente com o desenvolvedor responsável:</p>
+        <p style="margin-top: 0.5rem;">
+          <strong>Estúdio grathu</strong><br>
+          E-mail de Suporte e Privacidade: <a href="mailto:contato.grathu@gmail.com" style="color: hsl(var(--primary)); text-decoration: none;">contato.grathu@gmail.com</a><br>
+          Website: <a href="https://grathu.com" style="color: hsl(var(--primary)); text-decoration: none;">https://grathu.com</a><br>
+          Página do Aplicativo: <a href="https://grathu.com/maildash.html" style="color: hsl(var(--primary)); text-decoration: none;">https://grathu.com/maildash.html</a>
+        </p>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 grathu. Todos os direitos reservados. MailDash é desenvolvido por grathu.</p>
+        <p style="margin-top: 8px;">
+          <a href="maildash.html" style="color: hsl(var(--text-muted)); text-decoration: none; margin: 0 10px;">Página do MailDash</a> |
+          <a href="privacy.html" style="color: hsl(var(--text-muted)); text-decoration: none; margin: 0 10px;">Política Geral grathu</a> |
+          <a href="terms.html" style="color: hsl(var(--text-muted)); text-decoration: none; margin: 0 10px;">Termos de Serviço</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

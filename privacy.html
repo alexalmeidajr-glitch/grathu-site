@@ -87,32 +87,46 @@
           <li><strong>AdMob (se aplicável):</strong> Utilizado para veiculação de anúncios dentro de nossos Serviços gratuitos.</li>
         </ul>
 
-        <h2>5. Autenticação OAuth 2.0 e Integração com E-mails (MailDash)</h2>
-        <p>O aplicativo <strong>MailDash</strong> oferece integração opcional com contas de e-mail por meio do protocolo seguro <strong>OAuth 2.0</strong> (Google e Microsoft). Abaixo detalhamos como tratamos essas informações:</p>
+        <h2>5. Autenticação OAuth 2.0 e Tratamento de Dados do Google (MailDash)</h2>
+        <p>O aplicativo <strong>MailDash</strong> oferece integração opcional com contas de e-mail por meio do protocolo seguro <strong>OAuth 2.0</strong> (Google e Microsoft). Para consultar a política específica e dedicada do aplicativo, acesse a <a href="privacy-maildash.html" style="color: hsl(var(--primary)); text-decoration: underline; font-weight: 600;">Política de Privacidade Dedicada do MailDash</a>. Abaixo detalhamos como tratamos essas informações:</p>
         
-        <h3>5.1 Credenciais e Senhas</h3>
-        <p>O <strong>MailDash nunca tem acesso, não solicita e não armazena a sua senha</strong> da Conta Google ou Microsoft. O processo de autenticação é realizado diretamente nas páginas oficiais do respectivo provedor. O aplicativo recebe e armazena de forma criptografada localmente no dispositivo apenas tokens de autenticação temporários (OAuth tokens) necessários para viabilizar as consultas autorizadas.</p>
-
-        <h3>5.2 Escopo e Finalidade do Acesso aos E-mails</h3>
-        <p>O acesso concedido via OAuth 2.0 (como leitura de mensagens via Gmail API ou Microsoft Graph) é utilizado <strong>estritamente e exclusivamente</strong> para que o aplicativo possa ler mensagens relevantes identificadas pelo usuário (por assunto ou remetente) e gerar os painéis visuais de monitoramento e alertas locais no dispositivo.</p>
-
-        <h3>5.3 Processamento Local e Não Compartilhamento</h3>
-        <p>Todo o processamento das mensagens de e-mail é realizado <strong>100% localmente no dispositivo do usuário</strong>. Os conteúdos e dados de e-mail:</p>
+        <h3>5.1 Dados Acessados e Escopos do Google OAuth</h3>
+        <p>Para viabilizar suas funções de monitoramento, o MailDash solicita e acessa os seguintes dados:</p>
         <ul>
-          <li><strong>Nunca</strong> são transmitidos para servidores da grathu;</li>
-          <li><strong>Nunca</strong> são vendidos, alugados ou comercializados com terceiros;</li>
-          <li><strong>Nunca</strong> são utilizados para exibição de publicidade direcionada;</li>
-          <li><strong>Nunca</strong> são utilizados para treinar modelos de inteligência artificial ou machine learning generalistas.</li>
+          <li><strong>Perfil Básico e E-mail (<code>email</code>, <code>profile</code>, <code>openid</code>):</strong> Utilizados estritamente para identificar a conta conectada na interface de configurações e manter a sessão do usuário.</li>
+          <li><strong>Acesso ao Correio via IMAP (<code>https://mail.google.com/</code>):</strong> O aplicativo conecta-se diretamente ao servidor IMAP oficial do Gmail (<code>imap.gmail.com:993</code>) via SASL XOAUTH2 para localizar e ler <strong>exclusivamente</strong> e-mails com os prefixos de assunto configurados pelo usuário (ex: <em>"Monitoring My Email"</em>) e renderizar seus relatórios em HTML ou texto nas abas do painel.</li>
+          <li><strong>O que NÃO é acessado:</strong> O MailDash nunca solicita ou armazena a sua senha da Conta Google, não acessa contatos, agenda ou arquivos do Google Drive, e não lê mensagens que não correspondam aos prefixos de assunto configurados pelo usuário.</li>
+        </ul>
+
+        <h3>5.2 Finalidade Específica do Uso das Informações</h3>
+        <p>Os dados de e-mail acessados via Google OAuth são utilizados <strong>única e exclusivamente</strong> para:</p>
+        <ul>
+          <li>Filtrar e organizar mensagens de relatórios em abas dinâmicas de monitoramento no aplicativo;</li>
+          <li>Renderizar o corpo das mensagens (tabelas HTML ou textos formatados) nas abas do painel;</li>
+          <li>Disparar notificações locais no dispositivo quando novos relatórios forem detectados durante as verificações periódicas;</li>
+          <li>Excluir opcionalmente a mensagem lida da caixa de entrada, caso o usuário ative expressamente essa configuração.</li>
+        </ul>
+
+        <h3>5.3 Armazenamento Local e Não Compartilhamento</h3>
+        <p>O MailDash adota arquitetura estritamente <strong>local (on-device)</strong>. A grathu <strong>não opera servidores de banco de dados em nuvem</strong> para o MailDash. As mensagens e os tokens OAuth permanecem criptografados exclusivamente na memória segura do seu aparelho móvel.</p>
+        <ul>
+          <li><strong>NÃO Vendemos Dados:</strong> Os dados de usuários do Google e o conteúdo de e-mails nunca são vendidos, alugados ou comercializados;</li>
+          <li><strong>NÃO Compartilhamos com Terceiros:</strong> Nenhum dado obtido da sua conta Google é compartilhado com parceiros, servidores externos ou outras empresas;</li>
+          <li><strong>NÃO Utilizamos para Publicidade:</strong> Os dados acessados via Google APIs <strong>nunca</strong> são utilizados para exibição de anúncios publicitários, publicidade direcionada (AdMob ou qualquer outra rede de anúncios) ou criação de perfis de marketing;</li>
+          <li><strong>NÃO Treinamos Modelos de IA:</strong> Nenhum dado de e-mail é utilizado para treinamento de modelos de inteligência artificial ou machine learning;</li>
+          <li><strong>Sem Acesso Humano:</strong> Nenhuma pessoa ou funcionário da grathu tem acesso visual ou técnico às suas mensagens de e-mail.</li>
         </ul>
 
         <h3>5.4 Declaração de Conformidade com o Google (Limited Use Disclosure)</h3>
-        <p>O uso e a transferência para qualquer outro aplicativo de informações recebidas das APIs do Google pelo <strong>MailDash</strong> atenderão integralmente à <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: none;">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os <strong>requisitos de Uso Limitado (Limited Use Requirements)</strong>.</p>
+        <p>O uso e a transferência para qualquer outro aplicativo de informações recebidas das APIs do Google pelo <strong>MailDash</strong> atenderão integralmente à <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: underline; font-weight: 600;">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os <strong>requisitos de Uso Limitado (Limited Use Requirements)</strong>.</p>
+        <p style="font-style: italic; color: hsl(var(--text-secondary)); font-size: 0.95rem;">"MailDash's use and transfer of information received from Google APIs to any other app will adhere to Google API Services User Data Policy, including the Limited Use requirements."</p>
 
-        <h3>5.5 Revogação de Acesso</h3>
-        <p>Você pode revogar a permissão de acesso do MailDash à sua conta a qualquer momento:</p>
+        <h3>5.5 Retenção e Revogação de Acesso</h3>
+        <p>Os tokens e dados de painéis são mantidos no aparelho apenas enquanto o app estiver instalado. Você pode revogar o acesso ou excluir os dados:</p>
         <ul>
-          <li><strong>Google:</strong> Acesse <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: none;">myaccount.google.com/permissions</a> e remova o acesso do aplicativo MailDash.</li>
-          <li><strong>Microsoft:</strong> Acesse <a href="https://account.microsoft.com/privacy" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: none;">account.microsoft.com/privacy</a> e gerencie os aplicativos conectados.</li>
+          <li>Clicando em "Desconectar" na tela de configurações do MailDash;</li>
+          <li>Desinstalando o aplicativo ou limpando os dados do app nas configurações do Android;</li>
+          <li>Revogando a permissão na sua Conta Google a qualquer momento em: <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: none;">myaccount.google.com/permissions</a>.</li>
         </ul>
 
         <h2>6. Compartilhamento de Dados</h2>
