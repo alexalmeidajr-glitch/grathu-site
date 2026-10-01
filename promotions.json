@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "updated_at": "2026-09-17",
+  "updated_at": "2026-10-01",
   "apps": [
+    {
+      "id": "nodea",
+      "package_name": "com.glitch.nodea.nodea",
+      "name": "Nodea",
+      "tagline": "Grafo Visual de Ideias & Conexões",
+      "description": "Organize ideias, links da web, notas e planilhas em grafos interativos e nós hierárquicos com banco local criptografado.",
+      "category": "productivity",
+      "category_label": "Produtividade",
+      "icon_url": "https://grathu.com/assets/icon-nodea.png",
+      "store_url": "https://play.google.com/store/apps/details?id=com.glitch.nodea.nodea",
+      "market_url": "market://details?id=com.glitch.nodea.nodea",
+      "cta_text": "Baixar App",
+      "active": true,
+      "priority": 1
+    },
     {
       "id": "clickcook",
       "package_name": "com.clickcook.click_cook",
