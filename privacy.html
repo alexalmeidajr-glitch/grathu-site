@@ -37,7 +37,7 @@
   <section class="doc-hero">
     <div class="container">
       <h1>Política de Privacidade</h1>
-      <p>Última atualização: 24 de Setembro de 2026</p>
+      <p>Última atualização: 1 de Outubro de 2026</p>
     </div>
   </section>
 
@@ -84,7 +84,8 @@
           <li><strong>Google Play Services:</strong> Utilizado para autenticação de contas de jogador e serviços do sistema operacional. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--primary)); text-decoration: none;">Política de Privacidade do Google</a>.</li>
           <li><strong>Google Sign-In e Google Drive API:</strong> Alguns de nossos aplicativos (como <strong>GrathuHealth</strong>, <strong>ClickCook</strong> e <strong>Grauto</strong>) oferecem a funcionalidade opcional de backup em nuvem. Para isso, o aplicativo solicita autenticação na sua Conta Google via Google Sign-In e utiliza a Google Drive API exclusivamente para armazenar e recuperar seus dados de backup na pasta privada do aplicativo (<code>appDataFolder</code>), inacessível a terceiros. Nenhum outro dado da sua conta Google é acessado, coletado ou compartilhado.</li>
           <li><strong>Google Analytics for Firebase:</strong> Utilizado para entender o engajamento dos usuários e logs de performance.</li>
-          <li><strong>AdMob (se aplicável):</strong> Utilizado para veiculação de anúncios dentro de nossos Serviços gratuitos.</li>
+          <li><strong>Promoção Cruzada Interna (House Ads):</strong> Em aplicativos como o <strong>Nodea</strong>, exibimos banners promocionais dos nossos próprios aplicativos. O aplicativo efetua o download periódico do catálogo público em <code>grathu.com/promotions.json</code> para rotação local dos anúncios. Não realizamos coleta de ID de publicidade (AAID), rastreamento de comportamento nem perfilamento de usuário para essa finalidade.</li>
+          <li><strong>AdMob (se aplicável):</strong> Utilizado para veiculação de anúncios de terceiros dentro de nossos Serviços gratuitos.</li>
         </ul>
 
         <h2>5. Autenticação OAuth 2.0 e Tratamento de Dados do Google (MailDash)</h2>
@@ -138,14 +139,23 @@
         </ul>
 
         <h2>7. Segurança de Dados (Offline-First e Processamento Local)</h2>
-        <p>Nossos aplicativos de saúde e produtividade pessoal (como GrathuHealth, ClickCook, TasteNote e MailDash) operam primariamente no modo <strong>offline-first</strong> ou com processamento estritamente local. Seus dados e registros são armazenados no próprio dispositivo, garantindo que nem mesmo nós tenhamos acesso aos seus conteúdos sem a sua autorização expressa.</p>
+        <p>Nossos aplicativos de saúde, ideação e produtividade pessoal (como <strong>Nodea</strong>, <strong>GrathuHealth</strong>, <strong>ClickCook</strong>, <strong>TasteNote</strong> e <strong>MailDash</strong>) operam primariamente no modo <strong>offline-first</strong> ou com processamento estritamente local. Seus dados e registros são armazenados no próprio dispositivo, garantindo que nem mesmo nós tenhamos acesso aos seus conteúdos sem a sua autorização expressa.</p>
         <p>Adotamos medidas administrativas, técnicas e físicas de ponta para proteger suas informações contra perda, roubo, acesso não autorizado, divulgação, cópia ou alteração. No entanto, lembre-se de que nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro.</p>
+
+        <h3>7.1 Aplicativo Nodea (Grafos Visuais e Ideias Conectadas)</h3>
+        <p>O <strong>Nodea</strong> foi concebido sob rigoroso compromisso com a privacidade por padrão (Privacy by Design) e operação 100% local:</p>
+        <ul>
+          <li><strong>Banco de Dados Criptografado (SQLCipher / AES-256):</strong> Todos os nós, ideias, conexões em grafo, anotações em Markdown e planilhas integradas são salvos exclusivamente no banco de dados SQLite local, criptografado com o padrão militar AES-256 via SQLCipher. A chave de criptografia é gerada no dispositivo e protegida pelo Android Keystore (KeyStore seguro de hardware), sendo inacessível para outros aplicativos ou terceiros.</li>
+          <li><strong>Captura de Links e Metadados da Web:</strong> Quando você compartilha ou insere um link no Nodea, o aplicativo efetua apenas a leitura direta da página de destino para extrair título, descrição, imagem Open Graph e tags SEO temáticas. Essas informações são salvas diretamente no seu banco de dados local. Nenhum histórico de navegação, URL ou metadado é transmitido aos servidores da grathu ou a parceiros de publicidade.</li>
+          <li><strong>Arquivos e Imagens Locais:</strong> Imagens de capa atribuídas a nós ou ideias permanecem no armazenamento local do aparelho. A importação e exportação de backups locais são realizadas manualmente pelo usuário.</li>
+          <li><strong>Ausência de Criação de Conta:</strong> O Nodea não exige cadastro, e-mail, login de terceiros ou conexão com servidores de autenticação.</li>
+        </ul>
 
         <h2>8. Retenção e Exclusão de Dados (Data Retention and Deletion Policy)</h2>
         <p>Em conformidade com as diretrizes de dados do usuário do Google Play e a LGPD, detalhamos abaixo nossas práticas sobre o tempo de retenção e os procedimentos para exclusão das informações em nossos aplicativos:</p>
 
         <h3>8.1 Retenção de Dados Locais no Dispositivo</h3>
-        <p>Em aplicativos como <strong>GrathuHealth</strong>, <strong>ClickCook</strong>, <strong>TasteNote</strong> e <strong>MailDash</strong>, todos os registros, históricos e tokens de autenticação são mantidos localmente no aparelho enquanto o aplicativo estiver instalado. Você pode excluir qualquer informação diretamente na interface do app ou remover todos os dados instantaneamente desinstalando o aplicativo ou limpando os dados nas configurações do seu sistema operacional.</p>
+        <p>Em aplicativos como <strong>Nodea</strong>, <strong>GrathuHealth</strong>, <strong>ClickCook</strong>, <strong>TasteNote</strong> e <strong>MailDash</strong>, todos os registros, históricos e preferências são mantidos exclusivamente no aparelho enquanto o aplicativo estiver instalado. No <strong>Nodea</strong>, os dados são totalmente controlados por você e nunca sincronizados com servidores em nuvem. Você pode excluir qualquer informação diretamente na interface do app ou remover todos os dados instantaneamente desinstalando o aplicativo ou limpando os dados nas configurações do seu sistema operacional Android.</p>
 
         <h3>8.2 Processamento de E-mails e Tokens no MailDash</h3>
         <p>O <strong>MailDash</strong> não mantém servidores para coleta ou persistência de mensagens de e-mail. Os tokens de autenticação OAuth permanecem armazenados de maneira segura e criptografada apenas na memória privada do dispositivo móvel. A desconexão da conta no app ou a revogação da permissão na sua Conta Google ou Microsoft elimina imediatamente a capacidade de acesso do aplicativo.</p>
