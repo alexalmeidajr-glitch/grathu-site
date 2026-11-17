@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-11-17",
   "apps": [
+    {
+      "id": "tocafila",
+      "package_name": "com.tocafila.toca_fila",
+      "name": "TocaFila",
+      "tagline": "Fila Inteligente de Áudios & Mídias",
+      "description": "Organize e escute áudios e vídeos compartilhados em filas contínuas em segundo plano com armazenamento local permanente.",
+      "category": "productivity",
+      "category_label": "Produtividade",
+      "icon_url": "https://grathu.com/assets/icon-tocafila.png",
+      "store_url": "https://play.google.com/store/apps/details?id=com.tocafila.toca_fila",
+      "market_url": "market://details?id=com.tocafila.toca_fila",
+      "cta_text": "Baixar App",
+      "active": true,
+      "priority": 1
+    },
     {
       "id": "nodea",
       "package_name": "com.glitch.nodea.nodea",
